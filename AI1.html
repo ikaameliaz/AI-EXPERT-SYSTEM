@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Gaya Belajar</title>
+    <link rel="stylesheet" href="AI.css">
+    <script defer src="AI.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sistem Pakar Diagnosa Gaya Belajar</h1>
+    </header>
+    <main>
+        <!-- Biodata Form -->
+        <section id="biodata-section">
+            <h2>Input Biodata</h2>
+            <form id="biodata-form">
+                <div>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="age">Usia:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div>
+                    <label for="gender">Jenis Kelamin:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <button type="submit">Lanjutkan ke Diagnosa Gaya Belajar</button>
+            </form>
+        </section>
+
+        <!-- Expert System Form -->
+        <section id="expert-system-section" style="display:none;">
+            <form id="expert-system-form">
+                <h2>Jawab Pertanyaan Berikut:</h2>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C01">
+                        Saya suka menonton video tutorial.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C02">
+                        Saya lebih suka memberikan peta daripada menjelaskan jalan secara lisan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C03">
+                        Saya menyukai permainan berbentuk gambar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C04">
+                        Saya suka membuat catatan saat belajar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C05">
+                        Saya lebih suka menggunakan diagram untuk menjelaskan ide.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C06">
+                        Saya merasa lebih mudah mengingat informasi melalui gambar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C07">
+                        Saya merasa lebih mudah belajar dengan mendengarkan penjelasan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C08">
+                        Saya suka mendengarkan musik saat belajar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C09">
+                        Saya dapat mengingat lebih banyak informasi jika saya mendengarnya beberapa kali.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C10">
+                        Saya suka belajar sambil bergerak atau beraktifitas.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C11">
+                        Saya memahami materi lebih baik saat mendengar penjelasan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C12">
+                        Saya lebih suka mendengarkan penjelasan dibanding membaca.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C13">
+                        Saya belajar dengan lebih efektif jika saya dapat melihat demonstrasi langsung.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C14">
+                        Saya merasa lebih nyaman dengan instruksi lisan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C15">
+                        Saya lebih suka menggunakan audio atau rekaman untuk mempelajari sesuatu.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C16">
+                        Saya suka belajar dengan berinteraksi langsung dengan objek.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C17">
+                        Saya lebih suka kegiatan praktis daripada teori.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C18">
+                        Saya merasa lebih terlibat saat melakukan tugas fisik.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C19">
+                        Saya cenderung lebih fokus saat belajar sambil bergerak.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C20">
+                        Saya suka menggunakan alat bantu fisik saat belajar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C21">
+                        Saya lebih suka belajar dengan mencoba langsung.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C22">
+                        Saya lebih suka mengantarkan langsung ke alamat dibanding menjelaskan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C23">
+                        Saya merasa lebih baik setelah melakukan aktivitas fisik sebelum belajar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C24">
+                        Saya lebih suka berbicara dengan orang lain untuk mempelajari sesuatu.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C25">
+                        Saya lebih suka menggunakan komputer atau gadget untuk belajar.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C26">
+                        Saya lebih suka belajar melalui pengalaman praktis daripada teori.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C27">
+                        Saya suka melakukan eksperimen untuk mempelajari sesuatu.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C28">
+                        Saya lebih suka bekerja dengan tangan atau alat daripada membaca atau mendengarkan.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C29">
+                        Saya lebih suka menjelaskan materi secara langsung kepada orang lain.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ciri" value="C30">
+                        Saya merasa lebih mudah belajar melalui video atau film.
+                    </label>
+                </div>
+                <button type="submit" id="submit-button">Lihat Hasil</button>
+            </form>
+            <section id="result-section" style="display:none;">
+                <h2>Hasil Diagnosa:</h2>
+                <p id="result"></p>
+            </section>
+            <section id="print-section" style="display:none;">
+                <h2>Hasil Diagnosa Gaya Belajar</h2>
+                <p><strong>Nama:</strong> <span id="result-name"></span></p>
+                <p><strong>Usia:</strong> <span id="result-age"></span></p>
+                <p><strong>Jenis Kelamin:</strong> <span id="result-gender"></span></p>
+                <p><strong>Diagnosa Gaya Belajar:</strong> <span id="result-diagnosis"></span></p>
+                <button id="print-button">Print Hasil</button>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
